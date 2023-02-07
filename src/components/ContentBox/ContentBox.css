@@ -1,0 +1,33 @@
+.content-box {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid grey;
+}
+
+.info {
+  width: 100%;
+  font-size: small;
+  display: flex;
+  justify-content: space-around;
+  border-left: 1px solid black;
+  
+}
+
+.info:hover {
+  background-color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding-top: 0.8rem;
+}
+
+a:hover {
+  background-color: grey;
+}
+
+img {
+  width: 75%;
+  height: auto;
+}
