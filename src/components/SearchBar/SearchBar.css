@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
+
+.Search {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.SearchBox {
+  height: 2rem;
+  width: 10rem;
+  border: 3px solid black;
+  border-right: 1px solid black;
+  border-radius: 10px 0px 0px 10px;
+  margin: 2px 0px 2px 0px
+  
+}
+
+.SearchBox:focus {
+  border: 3px solid cadetblue;
+  border-right: 1px solid cadetblue;
+  outline: none;
+}
+
+.SearchButton {
+  height: 2.45rem;
+  border: 3px solid black;
+  border-left: 0px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: white;
+  vertical-align: auto;
+}
+
+.SearchButton:hover {
+  background-color: gray;
+}
+
+.SearchButton:active {
+
+}
