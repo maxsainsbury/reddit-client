@@ -7,7 +7,7 @@
 }
 
 .SearchBox {
-  height: 2rem;
+  height: 1.8rem;
   width: 10rem;
   border: 3px solid black;
   border-right: 1px solid black;
@@ -17,13 +17,13 @@
 }
 
 .SearchBox:focus {
-  border: 3px solid cadetblue;
-  border-right: 1px solid cadetblue;
+  border: 3px solid #4A63E0;
+  border-right: 1px solid #4A63E0;
   outline: none;
 }
 
 .SearchButton {
-  height: 2.45rem;
+  height: 2.25rem;
   border: 3px solid black;
   border-left: 0px;
   border-radius: 0px 10px 10px 0px;
@@ -32,7 +32,7 @@
 }
 
 .SearchButton:hover {
-  background-color: gray;
+  background-color: #878787;
 }
 
 .SearchButton:active {
