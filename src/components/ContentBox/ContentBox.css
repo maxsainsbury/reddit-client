@@ -48,3 +48,33 @@ img {
   width: 75%;
   height: auto;
 }
+
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 10px;
+  }
+
+  .item {
+    padding: 2rem;
+  }
+  a:hover {
+    background-color: #595959;
+    border-radius: 3px;
+  }
+  a:active {
+    background-color: #878787;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  * {
+    font-size: 10px;
+  }
+
+  .item {
+    padding: 1rem;
+  }
+  a:active {
+    background-color: #878787;
+  }
+}

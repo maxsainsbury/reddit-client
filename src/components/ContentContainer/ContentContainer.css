@@ -11,3 +11,9 @@ ul {
 li {
   padding-bottom: 3rem;
 }
+
+@media only screen and (max-width: 1020px) {
+  ul {
+    width: 90%;
+  }
+  }
