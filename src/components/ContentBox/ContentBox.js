@@ -15,10 +15,10 @@ export function ContentBox() {
       <h2>Title</h2>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SMPTE_Color_Bars.svg/1024px-SMPTE_Color_Bars.svg.png" />
       <div className="info">
-        <p title="karma">{karma} Karma</p>
-        <p title="user">Posted By {postedBy}</p>
-        <p title="time">{time} hours ago</p>
-        <a href="#" title="comments">{commentNum} Comments</a>
+        <p className="item" title="karma">{karma} Karma</p>
+        <p className="item" title="user">Posted By {postedBy}</p>
+        <p className="item" title="time">{time} hours ago</p>
+        <a href="#" className="item" title="comments">{commentNum} Comments</a>
       </div>
     </div>
 
