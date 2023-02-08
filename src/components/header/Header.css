@@ -20,4 +20,9 @@ header {
   height: 2rem;
   width: auto;
   margin-right: .75rem;
+  padding-left: 1rem;
+}
+
+.headerText {
+  color: white;
 }
