@@ -20,8 +20,29 @@
   
 }
 
+.media {
+  max-width: 28rem;
+  object-fit: cover;
+}
+
 .item {
   padding: 2rem;
+}
+
+h2 {
+  margin: 1rem;
+}
+
+.outsideLink {
+  margin: 2rem;
+}
+
+.NSFW {
+  color: red;
+}
+
+.selftext {
+  margin: 2rem;
 }
 
 a {
@@ -41,6 +62,10 @@ a:active {
 img {
   width: 75%;
   height: auto;
+}
+
+embed {
+  max-width: 28rem;
 }
 
 @media only screen and (max-width: 768px) {
