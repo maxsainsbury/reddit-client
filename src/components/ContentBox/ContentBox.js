@@ -5,7 +5,6 @@ import './ContentBox.css'
 export function ContentBox({index}) {
 
   let data = useSelector((state) => state.content.content[index].data);
-  console.log(data);
 
   const whatsInBody = (data) => {
     if (data.is_reddit_media_domain) {
@@ -27,7 +26,7 @@ export function ContentBox({index}) {
         <img className="media" src={data.url} />
       )
     }
-    else if (!data.url.includes('reddit')) {
+    else if (!data.url.includes('redd.it')) {
       return (
         <a className="outsideLink" href={data.url}>{data.url}</a>
       )

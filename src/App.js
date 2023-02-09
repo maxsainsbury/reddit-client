@@ -2,19 +2,25 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import { Header } from './components/header/Header';
-import { loadContent, isLoadingContent } from './components/ContentBox/ContentSlice';
+import { loadContent, changeAfter} from './components/ContentBox/ContentSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 
 function App() {
   const dispatch = useDispatch();
   const { failedToLoadContent } = useSelector((state) => state.content.failedToLoadContent); 
-  let loadingContent = useSelector((state) => state.content.isLoadingContent)
+  let loadingContent = useSelector((state) => state.content.isLoadingContent);
+  let page = useSelector((state) => state.content.page);
+  console.log(page);
+  let after = useSelector((state) => state.content.after);
+  console.log(after);
 
 
   useEffect(() => {
-    dispatch(loadContent());
-  }, [dispatch]);
+    let input = {page: page, after: after}
+    console.log(input);
+    dispatch(loadContent(input));
+  }, [dispatch, page]);
 
   return (
     <div className="App">
