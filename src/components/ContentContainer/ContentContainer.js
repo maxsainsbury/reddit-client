@@ -1,4 +1,4 @@
-import React, { onEffect } from "react";
+import React from "react";
 import { ContentBox } from "../ContentBox/ContentBox";
 import { changePage } from "../ContentBox/ContentSlice";
 import { useSelector, useDispatch } from "react-redux";

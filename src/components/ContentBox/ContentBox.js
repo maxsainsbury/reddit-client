@@ -17,13 +17,13 @@ export function ContentBox({index}) {
       }
       else {
         return (
-          <img className="media" src={data.url} />
+          <img className="media" alt="content" src={data.url} />
         )
       }
     }
     else if (data.url.includes('imgur')) {
       return (
-        <img className="media" src={data.url} />
+        <img className="media" alt="contnet" src={data.url} />
       )
     }
     else if (!data.url.includes('redd.it')) {
