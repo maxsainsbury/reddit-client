@@ -48,6 +48,7 @@ h2 {
 a {
   text-decoration: none;
   color: white;
+  width: 80%;
 }
 
 a:hover {
@@ -98,6 +99,8 @@ embed {
     text-align: center;
     width: 80%;
   }
+
+
 
   a:active {
     background-color: #878787;
