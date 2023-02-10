@@ -21,7 +21,6 @@ function App() {
   useEffect(() => {
     let input = {page: page, after: after, searchTerm: searchTerm, useSearch: useSearch}
     dispatch(loadContent(input));
-    return;
   }, [dispatch, page, useSearch, searchTerm]);
 
   return (
