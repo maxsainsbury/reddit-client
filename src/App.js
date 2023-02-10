@@ -14,13 +14,16 @@ function App() {
   console.log(page);
   let after = useSelector((state) => state.content.after);
   console.log(after);
+  let useSearch = useSelector((state) => state.content.useSearch);
+  console.log(useSearch)
+  let searchTerm = useSelector((state) => state.content.searchTerm);
 
 
   useEffect(() => {
-    let input = {page: page, after: after}
-    console.log(input);
+    let input = {page: page, after: after, searchTerm: searchTerm, useSearch: useSearch}
     dispatch(loadContent(input));
-  }, [dispatch, page]);
+    console.log('using r/all');
+  }, [dispatch, page, useSearch, searchTerm]);
 
   return (
     <div className="App">

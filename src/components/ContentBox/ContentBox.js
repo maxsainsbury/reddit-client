@@ -46,7 +46,7 @@ export function ContentBox({index}) {
         <p className="item" title="karma">{data.score} Karma</p>
         <p className="item">Posted on {data.subreddit_name_prefixed}</p>
         <p className="item">By {data.author}</p>
-        <a href={`https://www.reddit.com${data.permalink}`} className="item" title="comments">{data.num_comments} Comments</a>
+        <a href={`https://www.reddit.com${data.permalink}`} target="_blank" rel="noopener noreferrer" className="item" title="comments">{data.num_comments} Comments</a>
       </div>
     </div>
 

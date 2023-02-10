@@ -8,7 +8,6 @@ export function ContentContainer() {
   
   let data = useSelector((state) => state.content.content);
   let page = useSelector((state) => state.content.page);
-  console.log(page);
   let dispatch = useDispatch();
 
   const handleClick = (e) => {
@@ -34,7 +33,7 @@ export function ContentContainer() {
       </ul>
       <div className="pages">
         <button className="pages-button" onClick={handleClick}>prev</button>
-        <button className="pages-putton" onClick={handleClick}>next</button>
+        <button className="pages-button" onClick={handleClick}>next</button>
       </div>
     </div>
   )

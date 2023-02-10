@@ -1,11 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const redditBaseUrl = 'https://www.reddit.com';
+export const redditBaseUrl = 'https://www.reddit.com';
 
 export const loadContent = createAsyncThunk(
   'content/loadContent',
-  async ({page, after}) => {
-    let urlEnd = `/r/all/.json?count=25&page=${page}&after=${after}`;
+  async ({page, after, searchTerm, useSearch}) => {
+    let urlEnd;
+    if (useSearch === true) {
+      urlEnd = `/search/.json?q=${searchTerm}&after=${after}&page=${page}type=link`;
+    }
+    else {
+      urlEnd = `/r/all/.json?count=25&page=${page}&after=${after}`;
+    }
     console.log(urlEnd);
     const response = await fetch(`${redditBaseUrl}${urlEnd}`);
     const json = await response.json();
@@ -18,6 +24,8 @@ export const ContentSlice = createSlice({
   initialState: {
     isLoadingContent: true,
     failedToLoadContent: false,
+    useSearch: false,
+    searchTerm: '',
     page: 0,
     after: '',
     content: {
@@ -31,6 +39,23 @@ export const ContentSlice = createSlice({
     },
     changeAfter: (state, action) => {
       state.after = action.payload;
+    },
+    changeSearchTerm: (state, action) => {
+      state.searchTerm = action.payload;
+      console.log(state.searchTerm);
+    },
+    changeUseSearch: (state, action) => {
+      state.useSearch = (state.useSearch) ? false : true;
+    },
+    clearParams: (state, action) => {
+      state.after = '';
+      state.page = 0;
+    },
+    clearAll: (state, action) => {
+      state.after = '';
+      state.page = 0;
+      state.useSearch = false;
+      state.searchTerm = '';
     }
   },
   extraReducers: (builder) => {
@@ -55,6 +80,6 @@ export const ContentSlice = createSlice({
 export const selectContent = (state) => state.content.content;
 export const isLoadingContent = (state) => state.content.isLoadingContent;
 
-export const { changePage, changeAfter } = ContentSlice.actions;
+export const { changePage, changeAfter, changeSearchTerm, changeUseSearch, clearParams, clearAll } = ContentSlice.actions;
 
 export default ContentSlice.reducer;

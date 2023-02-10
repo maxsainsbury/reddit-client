@@ -12,6 +12,33 @@ li {
   padding-bottom: 3rem;
 }
 
+.pages {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages-button {
+  margin: 4rem;
+  height: 4rem;
+  width: 7rem;
+  font-size: 1.5rem;
+  color: black;
+  background-color: #F55D03;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.pages-button:hover {
+  background-color: #C24802;
+}
+
+.pages-button:active {
+  background-color: #752C01;
+}
+
 @media only screen and (max-width: 1020px) {
   ul {
     width: 90%;
