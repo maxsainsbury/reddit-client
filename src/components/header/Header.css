@@ -28,3 +28,17 @@ header {
 .headerText {
   color: white;
 }
+
+@media only screen and (max-width: 480px) {
+  header {
+    height: 4rem;
+  }
+
+  .headerText {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    height: 2.75rem;
+  }
+}

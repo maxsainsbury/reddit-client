@@ -41,6 +41,7 @@ li {
 
 @media only screen and (max-width: 1020px) {
   ul {
+    padding-top: 5rem;
     width: 90%;
   }
   }
