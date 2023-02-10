@@ -21,6 +21,7 @@ function App() {
   useEffect(() => {
     let input = {page: page, after: after, searchTerm: searchTerm, useSearch: useSearch}
     dispatch(loadContent(input));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, page, useSearch, searchTerm]);
 
   return (
