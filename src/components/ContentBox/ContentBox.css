@@ -93,6 +93,12 @@ embed {
   .item {
     padding: 1rem;
   }
+
+  a {
+    text-align: center;
+    width: 80%;
+  }
+
   a:active {
     background-color: #878787;
   }
