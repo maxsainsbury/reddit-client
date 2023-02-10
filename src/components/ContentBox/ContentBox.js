@@ -28,7 +28,7 @@ export function ContentBox({index}) {
     }
     else if (!data.url.includes('redd.it')) {
       return (
-        <a className="outsideLink" href={data.url}>{data.url}</a>
+        <a className="outsideLink" href={data.url} target="_blank" rel="noopener noreferrer">{data.url}</a>
       )
     }
   }
