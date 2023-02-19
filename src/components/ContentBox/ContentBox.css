@@ -46,8 +46,11 @@ h2 {
 }
 
 a {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   color: white;
+  align-items: center;
   width: 80%;
 }
 
@@ -69,6 +72,13 @@ embed {
   max-width: 28rem;
 }
 
+.selftext {
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  align-items: center;
+}
+
 @media only screen and (max-width: 768px) {
   * {
     font-size: 10px;
@@ -76,6 +86,9 @@ embed {
 
   .item {
     padding: 2rem;
+  }
+  a {
+    width: 80%;
   }
   a:hover {
     background-color: #595959;
